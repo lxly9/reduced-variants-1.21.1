@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "reduced_variants",
+	"version": "${version}",
+	"name": "Lily's Vanilla: Reduced Variants",
+	"description": "Solving inventory management one block at a time!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/reduced_variants/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.reduced_variants.ReducedVariants"
+		],
+		"client": [
+			"com.reduced_variants.ReducedVariantsClient"
+		],
+		"fabric-datagen": [
+			"com.reduced_variants.ReducedVariantsDataGenerator"
+		]
+	},
+	"mixins": [
+		"reduced_variants.mixins.json",
+		{
+			"config": "reduced_variants.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
